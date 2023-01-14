@@ -1,0 +1,36 @@
+.titre {
+    text-align: center;
+    font-size: 60px;
+}
+
+form {
+    margin-top: 10%;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: gray;
+    padding: 20px;
+    height: 60%;
+    width: 60%;
+    color: white;
+}
+
+#popup-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px
+}
+
+
+#mdpdisable{
+    display: block;
+}
+
+#info-form{
+    display: none;
+}
