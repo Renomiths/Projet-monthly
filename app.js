@@ -1,18 +1,24 @@
 function addNumbers() {
   // Récupération des valeurs des champs de formulaire source
-  let MorningWorked = document.getElementById("MorningWorked").value;
-  let AfternoonWorked = document.getElementById("AfternoonWorked").value;
-  let Wholedays = document.getElementById("Wholedays").value;
-  let num4 = document.getElementById("4eme").value;
-  let num5 = document.getElementById("5eme").value;
+  let MatinTravaille = document.getElementById("MatinTravaille").value;
+  let ApremTravaille = document.getElementById("ApremTravaille").value;
+  let ttjournee = document.getElementById("ttjournee").value;
+  let JourPresent = document.getElementById("JourPresent").value;
+  let NbreRepas = document.getElementById("NbreRepas").value;
 
   // Conversion des valeurs en nombres
-  MorningWorked = parseFloat(MorningWorked);
-  AfternoonWorked = parseFloat(AfternoonWorked);
-  Wholedays = parseFloat(Wholedays);
+  MatinTravaille = parseFloat(MatinTravaille);
+  ApremTravaille = parseFloat(ApremTravaille);
+  ttjournee = parseFloat(ttjournee);
+  JourPresent = parseFloat(JourPresent);
+  NbreRepas = parseFloat(NbreRepas);
 
   // Addition des nombres
-  let result = MorningWorked + AfternoonWorked + Wholedays;
+  console.log(NbrHMatin);
+  let result =
+    MatinTravaille * NbrHMatin +
+    ApremTravaille * NbrHAprem +
+    JourPresent * NbrHJour;
 
   // Mise à jour de la valeur du champ de formulaire cible
   document.querySelector("#result").value = result;
@@ -59,7 +65,7 @@ submitBtn.addEventListener("click", function () {
 saveBtn.addEventListener("click", function () {
   // Récupération de la valeur saisie dans les champs de saisie
 
-  TauxHor = TauxH.value;
+  TauxH = TauxH.value;
   IndemEntr = IndemEntr.value;
   TauxR = TauxR.value;
   SlrBaseContr = SlrBaseContr.value;
@@ -67,11 +73,19 @@ saveBtn.addEventListener("click", function () {
   NbrHAprem = NbrHAprem.value;
   NbrHJour = NbrHJour.value;
 
+  TauxH = parseFloat(TauxH);
+  IndemEntr = parseFloat(IndemEntr);
+  TauxR = parseFloat(TauxR);
+  SlrBaseContr = parseFloat(SlrBaseContr);
+  NbrHMatin = parseFloat(NbrHMatin);
+  NbrHAprem = parseFloat(NbrHAprem);
+  NbrHJour = parseFloat(NbrHJour);
+
   // Fermeture de la pop-up
   popup.style.display = "none";
 
   // Mise à jour des calculs sur la page initiale en utilisant la variable storedInfo
-  console.log(TauxHor);
+  console.log(TauxH);
   console.log(IndemEntr);
   console.log(TauxR);
   console.log(SlrBaseContr);
@@ -80,7 +94,7 @@ saveBtn.addEventListener("click", function () {
   console.log(NbrHJour);
 
   let formData = {
-    TauxHor: TauxHor,
+    TauxH: TauxH,
     IndemEntr: IndemEntr,
     TauxR: TauxR,
     SlrBaseContr: SlrBaseContr,
@@ -93,7 +107,9 @@ saveBtn.addEventListener("click", function () {
 });
 
 let storedData = JSON.parse(localStorage.getItem("formData"));
-console.log(storedData);
+
+  TauxHModif = storedData["TauxH"];
+  console.log(TauxHModif)
 
 // Ajout d'un listener sur le bouton pour annuler
 cancelBtn.addEventListener("click", function () {
