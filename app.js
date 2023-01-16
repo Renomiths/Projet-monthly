@@ -109,7 +109,7 @@ saveBtn.addEventListener("click", function () {
 let storedData = JSON.parse(localStorage.getItem("formData"));
 
   TauxHModif = storedData["TauxH"];
-  console.log(TauxHModif)
+  console.log(storedData)
 
 // Ajout d'un listener sur le bouton pour annuler
 cancelBtn.addEventListener("click", function () {
