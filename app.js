@@ -7,6 +7,7 @@ function addNumbers() {
   let NbreRepas = document.getElementById("NbreRepas").value;
 
   // Conversion des valeurs en nombres
+
   MatinTravaille = parseFloat(MatinTravaille);
   ApremTravaille = parseFloat(ApremTravaille);
   ttjournee = parseFloat(ttjournee);
@@ -15,13 +16,17 @@ function addNumbers() {
 
   // Addition des nombres
   console.log(NbrHMatin);
-  let result =
-    (MatinTravaille * NbrHMatin) +
-    (ApremTravaille * NbrHAprem) +
-    (JourPresent * NbrHJour);
+  let RepHeuresNorm =
+  (MatinTravaille * NbrHMatin) +
+  (ApremTravaille * NbrHAprem) +
+  (JourPresent * NbrHJour);
+
+  let JourActivite = NbrHMatin + NbrHAprem + JourPresent;
 
   // Mise à jour de la valeur du champ de formulaire cible
-  document.querySelector("#result").value = result;
+  document.querySelector("#RepHeuresNorm").value = RepHeuresNorm;
+
+  document.querySelector("#JourActivite").value = JourActivite;
 }
 // Ajout d'un listener sur le bouton pour lancer la fonction
 document.querySelector("#button").addEventListener("click", addNumbers);
@@ -108,17 +113,15 @@ saveBtn.addEventListener("click", function () {
 
 let storedData = JSON.parse(localStorage.getItem("formData"));
 
-  
-  TauxHModif = storedData["TauxH"];
-  IndemEntrModif = storedData["IndemEntr"];
-  TauxRModif = storedData["TauxR"];
-  NbrHMatinModif = storedData["NbrHMatin"];
-  NbrHApremModif = storedData["NbrHAprem"];
-  NbrHJourModif = storedData["NbrHJour"];
-  let SlrBaseContrModif = storedData["SlrBaseContr"];
+TauxHModif = storedData["TauxH"];
+IndemEntrModif = storedData["IndemEntr"];
+TauxRModif = storedData["TauxR"];
+NbrHMatinModif = storedData["NbrHMatin"];
+NbrHApremModif = storedData["NbrHAprem"];
+NbrHJourModif = storedData["NbrHJour"];
+let SlrBaseContrModif = storedData["SlrBaseContr"];
 
-
-  console.log(SlrBaseContrModif)
+console.log(storedData);
 
 // Ajout d'un listener sur le bouton pour annuler
 cancelBtn.addEventListener("click", function () {
