@@ -13,53 +13,56 @@
 </head>
 
 <body>
-    <form action method="post">
-        <div>
-            <label for="name">Nombre de matinée travaillées</label>
-            <input type="text" id="MatinTravaille" name="MatinTravaille">
-        </div>
-        <div>
-            <label for="name">Nombre d'après midi travaillés</label>
-            <input type="text" id="ApremTravaille" name="ApremTravaille">
-        </div>
-        <div>
-            <label for="name">Nombre de jours entiers travaillés </label>
-            <input type="text" id="ttjournee" name="ttjournee">
-        </div>
-        <div>
-            <label for="name">Nombre de jours de présence</label>
-            <input type="text" id="JourPresent" name="JourPresent">
-        </div>
-        <div>
-            <label for="name">Nombre de repas</label>
-            <input type="text" id="NbreRepas" name="NbreRepas">
-        </div>
-    </form>
+    <div class="Champs">
+        <form action method="post">
+            <div class="debut">
+                <div>
+                    <label for="name">Nombre de matinée travaillées</label>
+                    <input type="text" id="MatinTravaille" name="MatinTravaille">
+                </div>
+                <div>
+                    <label for="name">Nombre d'après midi travaillés</label>
+                    <input type="text" id="ApremTravaille" name="ApremTravaille">
+                </div>
+                <div>
+                    <label for="name">Nombre de jours entiers travaillés </label>
+                    <input type="text" id="ttjournee" name="ttjournee">
+                </div>
+                <div>
+                    <label for="name">Nombre de jours de présence</label>
+                    <input type="text" id="JourPresent" name="JourPresent">
+                </div>
+                <div>
+                    <label for="name">Nombre de repas</label>
+                    <input type="text" id="NbreRepas" name="NbreRepas">
+                </div>
+            </div>
+        </form>
 
-    <input type="button" id="button" value="Calculer">
+        <input type="button" id="button" value="Calculer">
 
 
-    <form id="form2">
-        <label>Nombre d'heures normals</label>
-        <input type="text" id="RepHeuresNorm" disabled>
-    </form>
-    <form id="form3">
-        <label>Nombre de jour d'activité</label>
-        <input type="text" id="JourActivite" disabled>
-    </form>
-    <form id="form4">
-        <label>Salaire net</label>
-        <input type="text" id="SalaireNet" disabled>
-    </form>
-    <form id="form5">
-        <label>Indemnité d'entetretiens</label>
-        <input type="text" id="IndemnEntretiens" disabled>
-    </form>
-    <form id="form6">
-        <label>Indemnité de repas</label>
-        <input type="text" id="IndemnRepas" disabled>
-    </form>
-
+        <form id="form2">
+            <label>Nombre d'heures normals</label>
+            <input type="text" id="RepHeuresNorm" disabled>
+        </form>
+        <form id="form3">
+            <label>Nombre de jour d'activité</label>
+            <input type="text" id="JourActivite" disabled>
+        </form>
+        <form id="form4">
+            <label>Salaire net</label>
+            <input type="text" id="SalaireNet" disabled>
+        </form>
+        <form id="form5">
+            <label>Indemnité d'entetretiens</label>
+            <input type="text" id="IndemnEntretiens" disabled>
+        </form>
+        <form id="form6">
+            <label>Indemnité de repas</label>
+            <input type="text" id="IndemnRepas" disabled>
+        </form>
+    </div>
 
     <!-- Bouton pour ouvrir la pop-up -->
     <button id="popup-btn">Ouvrir la pop-up</button>
@@ -78,27 +81,27 @@
 
             <div id="info-form">
                 <label>Taux Horraire :</label>
-                <input id="TauxHorraire" type="number"><br><br>
+                <input id="TauxHorraire" type="number"><br>
 
                 <label>Indemnité d'entretien :</label>
-                <input id="IndemnEntretien" type="number"><br><br>
+                <input id="IndemnEntretien" type="number"><br>
 
                 <label>Taux de repas :</label>
-                <input id="TauxRepas" type="number"><br><br>
+                <input id="TauxRepas" type="number"><br>
 
                 <label>Salaire de base sur contrat :</label>
-                <input id="SalaireBaseContrat" type="number"><br><br>
+                <input id="SalaireBaseContrat" type="number"><br>
 
                 <label>Nombre d'heure matinée:</label>
-                <input id="NbrHeureMatin" type="number"><br><br>
+                <input id="NbrHeureMatin" type="number"><br>
 
                 <label>Nombre d'heure après-midi :</label>
-                <input id="NbrHeureAprem" type="number"><br><br>
+                <input id="NbrHeureAprem" type="number"><br>
 
                 <label>Nombre d'heure journée :</label>
-                <input id="NbrHeurejournee" type="number"><br><br>
+                <input id="NbrHeurejournee" type="number"><br>
 
-                
+
                 <button type="button" id="save-btn">Enregistrer</button>
                 <button type="button" id="cancel-btn">Annuler</button>
 

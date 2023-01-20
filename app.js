@@ -17,16 +17,28 @@ function addNumbers() {
   // Addition des nombres
   console.log(NbrHMatin);
   let RepHeuresNorm =
-  (MatinTravaille * NbrHMatin) +
-  (ApremTravaille * NbrHAprem) +
-  (JourPresent * NbrHJour);
+    MatinTravaille * NbrHMatin +
+    ApremTravaille * NbrHAprem +
+    JourPresent * NbrHJour;
 
   let JourActivite = NbrHMatin + NbrHAprem + JourPresent;
+
+  let SalaireNet = RepHeuresNorm * TauxHModif + SlrBaseContrModif;
+
+  let IndemnEntretiens = JourPresent * IndemEntrModif;
+
+  let IndemnRepas = NbreRepas + TauxRModif;
 
   // Mise à jour de la valeur du champ de formulaire cible
   document.querySelector("#RepHeuresNorm").value = RepHeuresNorm;
 
   document.querySelector("#JourActivite").value = JourActivite;
+
+  document.querySelector("#SalaireNet").value = SalaireNet;
+
+  document.querySelector("#IndemnEntretiens").value = IndemnEntretiens;
+
+  document.querySelector("#IndemnRepas").value = IndemnRepas;
 }
 // Ajout d'un listener sur le bouton pour lancer la fonction
 document.querySelector("#button").addEventListener("click", addNumbers);

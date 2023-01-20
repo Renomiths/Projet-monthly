@@ -4,7 +4,8 @@
 }
 
 form {
-    margin-top: 10%;
+    margin-top: 2%;
+    
 }
 
 #popup {
@@ -34,3 +35,17 @@ form {
 #info-form{
     display: none;
 }
+
+.Champs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#button{
+
+    height: 100px;
+    width: 40%;
+    margin-top: 50px;
+}
+
